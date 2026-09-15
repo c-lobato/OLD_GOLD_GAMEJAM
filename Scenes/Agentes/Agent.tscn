@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bvsbhej82wthb"]
+
+[ext_resource type="Script" uid="uid://ktri5uxei25k" path="res://Scripts/agent.gd" id="1_lyujn"]
+[ext_resource type="Texture2D" uid="uid://kk5giirghdpe" path="res://Assets/AgentPlaceHolder.png" id="2_6gknx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6wxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6gknx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Agent" type="Node2D" unique_id=1197959878]
+script = ExtResource("1_lyujn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=919824582]
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_f6wxy")
