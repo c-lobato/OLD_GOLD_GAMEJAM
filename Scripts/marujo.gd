@@ -1,8 +1,11 @@
 extends Button
 
 func _ready() -> void:
-	grab_focus()
-
+	pass 
+	
+func _process(delta: float) -> void:
+	pass
+	
 func _on_pressed() -> void:
-	Global.player_captain = "Bucaneiro"
+	Global.player_captain = "Marujo"
 	get_tree().change_scene_to_file("res://Scenes/OrganizationMenu.tscn")
