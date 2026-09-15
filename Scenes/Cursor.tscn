@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3gqd0fe2ymf4" path="res://Assets/CursorPlaceholder.png" id="2_6qa2i"]
 
 [node name="Cursor" type="Node2D" unique_id=1434084429]
-position = Vector2(10, 8)
+position = Vector2(8, 8)
 script = ExtResource("1_5vcpq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1256358931]
