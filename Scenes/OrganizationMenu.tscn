@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://c07d8mw0eohjp"]
 
-[ext_resource type="Script" uid="uid://ckdxt6iusapfg" path="res://Scripts/back.gd" id="1_gkj4o"]
+[ext_resource type="Script" uid="uid://ye7ru6uf6wj0" path="res://Scripts/organization_menu.gd" id="1_gkj4o"]
 
 [node name="OrganizationMenu" type="Node2D" unique_id=260573885]
+script = ExtResource("1_gkj4o")
 
 [node name="Control" type="Control" parent="." unique_id=536204282]
 layout_mode = 3
@@ -21,6 +22,12 @@ color = Color(1.8650665e-07, 0.2109775, 0.21187133, 1)
 layout_mode = 0
 offset_right = 24.0
 offset_bottom = 20.0
-script = ExtResource("1_gkj4o")
 
-[connection signal="pressed" from="Control/Back" to="Control/Back" method="_on_pressed"]
+[node name="Battle" type="Button" parent="Control" unique_id=203420316]
+layout_mode = 0
+offset_left = 136.0
+offset_right = 160.0
+offset_bottom = 20.0
+
+[connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Control/Battle" to="." method="_on_battle_pressed"]

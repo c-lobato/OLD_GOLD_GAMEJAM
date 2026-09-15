@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://ccv6jrcvpjnwj"]
 
-[ext_resource type="Script" uid="uid://38lp3ar22tmg" path="res://Scripts/bucaneiro.gd" id="1_5vffu"]
-[ext_resource type="Script" uid="uid://brr7jlp2iwr10" path="res://Scripts/marujo.gd" id="2_3rdv3"]
-[ext_resource type="Script" uid="uid://cw8k1var4gdp" path="res://Scripts/credits.gd" id="2_5qsdq"]
-[ext_resource type="Script" uid="uid://b0twtikjoe26f" path="res://Scripts/curandeiro.gd" id="3_od0tc"]
+[ext_resource type="Script" uid="uid://bmpnjl5hv2n48" path="res://Scripts/selection_menu.gd" id="1_5vffu"]
 
 [node name="SelectionMenu" type="Node2D" unique_id=508334293]
+script = ExtResource("1_5vffu")
 
 [node name="Control" type="Control" parent="." unique_id=364149844]
 layout_mode = 3
@@ -35,21 +33,17 @@ alignment = 1
 [node name="Bucaneiro" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=1666220068]
 layout_mode = 2
 size_flags_horizontal = 0
-script = ExtResource("1_5vffu")
 
 [node name="Marujo" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=1225759406]
 layout_mode = 2
-script = ExtResource("2_3rdv3")
 
 [node name="Curandeiro" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=544822634]
 layout_mode = 2
-script = ExtResource("3_od0tc")
 
 [node name="Credits" type="Button" parent="Control/VBoxContainer" unique_id=1082545770]
 layout_mode = 2
-script = ExtResource("2_5qsdq")
 
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Bucaneiro" to="Control/VBoxContainer/HBoxContainer/Bucaneiro" method="_on_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Marujo" to="Control/VBoxContainer/HBoxContainer/Marujo" method="_on_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Curandeiro" to="Control/VBoxContainer/HBoxContainer/Curandeiro" method="_on_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Credits" to="Control/VBoxContainer/Credits" method="_on_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Bucaneiro" to="." method="_on_bucaneiro_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Marujo" to="." method="_on_marujo_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Curandeiro" to="." method="_on_curandeiro_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed"]

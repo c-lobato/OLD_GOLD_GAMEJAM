@@ -1,8 +1,0 @@
-extends Button
-
-func _ready() -> void:
-	grab_focus()
-
-func _on_pressed() -> void:
-	Global.player_captain = "Bucaneiro"
-	get_tree().change_scene_to_file("res://Scenes/OrganizationMenu.tscn")

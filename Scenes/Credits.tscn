@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b87wudfs6nqnq"]
 
-[ext_resource type="Script" uid="uid://ckdxt6iusapfg" path="res://Scripts/back.gd" id="1_i8h6y"]
+[ext_resource type="Script" uid="uid://ctrbojcx0sse0" path="res://Scripts/credits.gd" id="1_i8h6y"]
 
 [node name="Credits" type="Node2D" unique_id=428864299]
+script = ExtResource("1_i8h6y")
 
 [node name="Control" type="Control" parent="." unique_id=665396547]
 layout_mode = 3
@@ -21,6 +22,5 @@ color = Color(1.8650665e-07, 0.2109775, 0.21187133, 1)
 layout_mode = 0
 offset_right = 24.0
 offset_bottom = 20.0
-script = ExtResource("1_i8h6y")
 
-[connection signal="pressed" from="Control/Back" to="Control/Back" method="_on_pressed"]
+[connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
