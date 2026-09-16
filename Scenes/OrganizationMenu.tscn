@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://c07d8mw0eohjp"]
 
 [ext_resource type="Script" uid="uid://ye7ru6uf6wj0" path="res://Scripts/organization_menu.gd" id="1_gkj4o"]
+[ext_resource type="Script" uid="uid://cs6qoacjahc8r" path="res://Scripts/cursors/organizationCursor.gd" id="2_pnwjw"]
+[ext_resource type="Texture2D" uid="uid://kk5giirghdpe" path="res://Assets/AgentPlaceHolder.png" id="4_88lvj"]
 
 [node name="OrganizationMenu" type="Node2D" unique_id=260573885]
 script = ExtResource("1_gkj4o")
+
+[node name="Cursor" type="Node2D" parent="." unique_id=1466833099]
+script = ExtResource("2_pnwjw")
 
 [node name="Control" type="Control" parent="." unique_id=536204282]
 layout_mode = 3
@@ -23,5 +28,35 @@ layout_mode = 0
 offset_left = 136.0
 offset_right = 160.0
 offset_bottom = 20.0
+
+[node name="TextureRect" type="ColorRect" parent="." unique_id=259292247]
+offset_top = 112.0
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0.33809972, 0.3380997, 0.33809966, 1)
+
+[node name="TRIPULANTE 1" type="TextureButton" parent="TextureRect" unique_id=1383966624 groups=["tripulantes"]]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 24.0
+texture_normal = ExtResource("4_88lvj")
+
+[node name="TRIPULANTE 2" type="TextureButton" parent="TextureRect" unique_id=1285261330 groups=["tripulantes"]]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 8.0
+offset_right = 90.0
+offset_bottom = 24.0
+texture_normal = ExtResource("4_88lvj")
+
+[node name="TRIPULANTE 3" type="TextureButton" parent="TextureRect" unique_id=1775032351 groups=["tripulantes"]]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 8.0
+offset_right = 136.0
+offset_bottom = 24.0
+texture_normal = ExtResource("4_88lvj")
 
 [connection signal="pressed" from="Control/Battle" to="." method="_on_battle_pressed"]
