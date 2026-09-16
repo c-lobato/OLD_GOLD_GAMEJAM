@@ -3,12 +3,13 @@ extends Node
 var player_captain:String = ""
 var contratos:Array[AgenteData] = []
 var inventario:Array[Resource] = []
+var dinheiro:int = 0
 
 func _ready() -> void:
 	pass 
 
 func _process(delta: float) -> void:
-	pass	
+	pass
 	
 func adicionar_contrato(agente: AgenteData) -> void:
 	var novo_agente = agente.duplicate()
