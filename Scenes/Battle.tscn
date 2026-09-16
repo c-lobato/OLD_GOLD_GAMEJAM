@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://clxuqj0o62vfm" path="res://Assets/icon.svg" id="1_wvl2i"]
 [ext_resource type="PackedScene" uid="uid://diyb7rwklp0xk" path="res://Scenes/Cursor.tscn" id="2_vr6xi"]
+[ext_resource type="PackedScene" uid="uid://c0abqtf6uogsv" path="res://Scenes/BattleManager.tscn" id="3_2h7oj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvl2i"]
 texture = ExtResource("1_wvl2i")
@@ -17,3 +18,5 @@ tile_map_data = PackedByteArray("AAAAAAAAAgACAAMAAAABAAAAAgACAAMAAAACAAAAAgACAAM
 tile_set = SubResource("TileSet_f6wxy")
 
 [node name="Cursor" parent="." unique_id=1434084429 instance=ExtResource("2_vr6xi")]
+
+[node name="BattleManager" parent="." unique_id=410381830 instance=ExtResource("3_2h7oj")]

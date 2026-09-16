@@ -11,7 +11,8 @@ func _process(delta: float) -> void:
 	pass	
 	
 func adicionar_contrato(agente: AgenteData) -> void:
-	contratos.append(agente)
+	var novo_agente = agente.duplicate()
+	contratos.append(novo_agente)
 
 func atribuir_item(agente:AgenteData, item:Resource) -> void:
 	if item in inventario:
