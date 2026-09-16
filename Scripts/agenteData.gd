@@ -1,6 +1,8 @@
 class_name AgenteData
 extends Resource
 
+@export var grid_pos:Vector2i = Vector2i(0,0)
+
 @export var nome: String = ""
 @export var hp_max: int = 10
 @export var hp_atual: int = 10
