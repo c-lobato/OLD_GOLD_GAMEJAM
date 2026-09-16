@@ -17,3 +17,5 @@ func atribuir_item(agente:AgenteData, item:Resource) -> void:
 	if item in inventario:
 		agente.itens_equipados.append(item)
 		inventario.erase(item)
+		#bLEGHHH
+		
