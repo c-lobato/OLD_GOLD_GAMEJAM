@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://jlee3wmxxn30"]
+
+[ext_resource type="Texture2D" uid="uid://3gqd0fe2ymf4" path="res://Assets/CursorPlaceholder.png" id="1_384tf"]
+[ext_resource type="Script" uid="uid://cs6qoacjahc8r" path="res://Scripts/cursors/organizationCursor.gd" id="1_ep1tn"]
+
+[node name="OrgCursor" type="Node2D" unique_id=1196401456]
+position = Vector2(8, 8)
+script = ExtResource("1_ep1tn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=841733150]
+texture = ExtResource("1_384tf")
