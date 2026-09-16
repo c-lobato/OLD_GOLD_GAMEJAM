@@ -15,7 +15,7 @@ show_behind_parent = true
 offset_right = 189.0
 offset_bottom = 153.0
 theme = SubResource("Theme_qcdcc")
-color = Color(1.8650665e-07, 0.2109775, 0.21187133, 1)
+color = Color(0.60784316, 0.6784314, 0.7176471, 1)
 
 [node name="PartyGrid" type="Node2D" parent="." unique_id=11179850]
 
