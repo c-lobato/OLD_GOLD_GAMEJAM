@@ -11,12 +11,11 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=2072287469]
-show_behind_parent = true
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=98305651]
 layout_mode = 0
 offset_right = 189.0
 offset_bottom = 153.0
-color = Color(1.8650665e-07, 0.2109775, 0.21187133, 1)
+color = Color(0.60784316, 0.6784314, 0.7176471, 1)
 
 [node name="Back" type="Button" parent="Control" unique_id=1341887982]
 layout_mode = 0

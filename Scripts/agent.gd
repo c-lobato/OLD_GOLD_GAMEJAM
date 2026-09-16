@@ -1,10 +1,22 @@
+class_name Agent
 extends Node2D
 
-func _ready() -> void:
-	pass 
+var dados: AgenteData
 
-func _process(delta: float) -> void:
-	pass
+func carregar_dados(data: AgenteData) -> void:
+	if data == null:
+		push_error("Nenhum dado fornecido!")
+		return
+	
+	dados = data
+	$AnimatedSprite2D.animation = dados.tipo 
+	$AnimatedSprite2D.play()
+	
+	print(dados.nome, dados.grid_pos)
 
+
+func atacar() -> void:
+	print("Agente realizando ataque genérico!")
+	
 
 	

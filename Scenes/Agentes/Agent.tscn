@@ -1,16 +1,67 @@
 [gd_scene format=3 uid="uid://bvsbhej82wthb"]
 
 [ext_resource type="Script" uid="uid://ktri5uxei25k" path="res://Scripts/agent.gd" id="1_lyujn"]
-[ext_resource type="Texture2D" uid="uid://kk5giirghdpe" path="res://Assets/AgentPlaceHolder.png" id="2_6gknx"]
+[ext_resource type="Texture2D" uid="uid://cifa2hkfgdfoq" path="res://Assets/sprites/characters/buccaneer_idle.png" id="2_6y6ox"]
+[ext_resource type="Texture2D" uid="uid://d2psp3lltcw50" path="res://Assets/sprites/characters/healer_idle.png" id="3_rqgi5"]
+[ext_resource type="Texture2D" uid="uid://blscoso5yoqja" path="res://Assets/sprites/characters/sailor_idle.png" id="4_1bnog"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv6wi"]
+atlas = ExtResource("2_6y6ox")
+region = Rect2(0, 0, 15, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vi2o"]
+atlas = ExtResource("2_6y6ox")
+region = Rect2(15, 0, 15, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr8s3"]
+atlas = ExtResource("3_rqgi5")
+region = Rect2(0, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fluxm"]
+atlas = ExtResource("3_rqgi5")
+region = Rect2(14, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nggqn"]
+atlas = ExtResource("4_1bnog")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p31nf"]
+atlas = ExtResource("4_1bnog")
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f6wxy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_6gknx")
+"texture": SubResource("AtlasTexture_jv6wi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vi2o")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"Bucaneiro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr8s3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fluxm")
+}],
+"loop": 1,
+"name": &"Curandeiro ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nggqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p31nf")
+}],
+"loop": 1,
+"name": &"Marujo",
 "speed": 5.0
 }]
 
@@ -20,3 +71,4 @@ script = ExtResource("1_lyujn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=919824582]
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f6wxy")
+animation = &"Curandeiro "
