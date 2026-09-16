@@ -1,5 +1,4 @@
 extends Node2D
-var capitao = AgenteData.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,38 +12,53 @@ func _process(delta: float) -> void:
 
 func _on_bucaneiro_pressed() -> void:
 	Global.player_captain = "Bucaneiro"
+	var capitao = AgenteData.new()
+	
+	capitao.grid_pos = Vector2i(1,1)
 	capitao.tipo = "Bucaneiro"
 	capitao.nome = "Capitão"
 	capitao.hp_max = 10
 	capitao.hp_atual = 10
 	capitao.speed = 1
 	capitao.damage = 3
+	capitao.cena_agente = load("res://Scenes/Agentes/Agent.tscn")
 	Global.adicionar_contrato(capitao)
 	get_tree().change_scene_to_file("res://Scenes/OrganizationMenu.tscn")
 
 
 func _on_marujo_pressed() -> void:
 	Global.player_captain = "Marujo"
+	var capitao = AgenteData.new()
+	
+	capitao.grid_pos = Vector2i(1,1)
 	capitao.tipo = "Marujo"
 	capitao.nome = "Capitão"
 	capitao.hp_max = 10
 	capitao.hp_atual = 10
 	capitao.speed = 1
 	capitao.damage = 3
+	capitao.cena_agente = load("res://Scenes/Agentes/Agent.tscn")
 	Global.adicionar_contrato(capitao)
 	get_tree().change_scene_to_file("res://Scenes/OrganizationMenu.tscn")
 
 func _on_curandeiro_pressed() -> void:
 	Global.player_captain = "Curandeiro"
+	
+	var capitao = AgenteData.new()
+	
+	capitao.grid_pos = Vector2i(1,1)
 	capitao.tipo = "Curandeiro"
 	capitao.nome = "Capitão"
 	capitao.hp_max = 10
 	capitao.hp_atual = 10
 	capitao.speed = 1
 	capitao.damage = 3
+	capitao.cena_agente = load("res://Scenes/Agentes/Agent.tscn")
 	Global.adicionar_contrato(capitao)
 	for i in Global.contratos:
 		print(i.nome)
+		if i.tipo == "Curandeiro":
+			print("Curandeiro")
 	get_tree().change_scene_to_file("res://Scenes/OrganizationMenu.tscn")
 
 
