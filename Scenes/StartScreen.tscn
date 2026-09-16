@@ -16,7 +16,7 @@ script = ExtResource("1_ko4ly")
 layout_mode = 0
 offset_right = 189.0
 offset_bottom = 153.0
-color = Color(1.8650665e-07, 0.2109775, 0.21187133, 1)
+color = Color(0.60784316, 0.6784314, 0.7176471, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1465822564]
 layout_mode = 1
