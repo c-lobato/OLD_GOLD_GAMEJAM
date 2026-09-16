@@ -52,8 +52,8 @@ func _on_cursor_tile_selected(grid_pos: Vector2i, pixel_pos: Vector2) -> void:
 
 	#caso o tile n esteja ocupado, é adicionado à lista de posição o agente selecionado
 	occupied_tiles[grid_pos] = selected_agent
-	if selected_agent.AgentData:   #verificar qual classe vai receber a PackedScene dos tripulante
-		var novo_tripulante = selected_agent.AgentData.instantiate()
+	if selected_agent.cena_agente:   #verificar qual classe vai receber a PackedScene dos tripulante
+		var novo_tripulante = selected_agent.cena_agente.instantiate()
 		novo_tripulante.position = pixel_pos
 		party_grid.add_child(novo_tripulante)
 		print("Tripulante posicionado na grid! Posição: ", grid_pos)
