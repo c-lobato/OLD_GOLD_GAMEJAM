@@ -4,11 +4,7 @@ var player_captain:String = ""
 var contratos:Array[AgenteData] = []
 var contratos_equipados_grid:Array[AgenteData] = []
 var inventario:Array[Resource] = []
-<<<<<<< HEAD
-var dinheiro:int = 0
-=======
 var ouro:int = 0
->>>>>>> a0d9ceff3636a0fc7044ec2899626dafffcee2bc
 
 func _ready() -> void:
 	pass 
