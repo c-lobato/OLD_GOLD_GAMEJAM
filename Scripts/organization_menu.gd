@@ -7,11 +7,16 @@ extends Node2D
 
 var occupied_tiles = {} # salva a disposição da party: chave = Vector2i, valor = AgenteData
 var selected_agent: AgenteData = null
+var tween = create_tween()
 
 # Called when the node enters the scene tree for the first time.
 func _ready(): 
+	print("Piratas na Global: ", Global.contratos.size()) #para verificar quantos agents foram instanciados na lista
+
 	#inicializa a cena direto no botão de GO BATTLE
 	btn_battle.grab_focus()
+
+	party_grid.modulate.a = 0.3    #diminui canal alpha da grid ao carregar a cena
 
 	org_cursor.tile_selected.connect(_on_cursor_tile_selected)
 	org_cursor.cancelled_placement.connect(_on_cursor_cancelled)
@@ -32,11 +37,15 @@ func _ready():
 #função chamada ao selecionar um agente (apertar Enter numa tropa para posiciona-la na grid)
 func _on_agent_pressed(btn_node: Button) -> void:
 	if btn_node.agente_anexado == null:
+		print("O botão não tem um pirata anexado")
 		return
 
 	selected_agent = btn_node.agente_anexado
 	org_cursor.is_active = true
 	org_cursor.show()
+
+	#animação de surgimento da grid
+	tween.tween_property(party_grid, "modulate:a", 0.85, 0.2)
 
 	#tira o foco da UI e joga para a grid da party
 	var focus_owner = get_viewport().gui_get_focus_owner()
@@ -45,6 +54,12 @@ func _on_agent_pressed(btn_node: Button) -> void:
 
 #função chamada no modo construção ao selecionar um tile e posicionar uma tropa
 func _on_cursor_tile_selected(grid_pos: Vector2i, pixel_pos: Vector2) -> void:
+	if selected_agent == null:
+		print("Crash evitado: O cursor tentou posicionar, mas não há pirata selecionado.")
+		_return_to_organization_screen()
+		return
+
+	
 	#if para verificação de ocupação do tile
 	if occupied_tiles.has(grid_pos):
 		print("Slot ocupado!! Selecione outro")     
@@ -75,5 +90,10 @@ func _return_to_organization_screen() -> void:
 	org_cursor.hide()
 	selected_agent = null
 
+	tween.tween_property(party_grid, "modulate:a", 0.3, 0.2)
+
+
 	# Devolve o foco para o primeiro botão para o jogador continuar navegando
 	agents_container.get_child(0).grab_focus()
+
+	
