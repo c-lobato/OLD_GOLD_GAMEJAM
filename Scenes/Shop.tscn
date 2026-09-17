@@ -2,5 +2,32 @@
 
 [ext_resource type="Script" uid="uid://dbr8qecar4orf" path="res://Scripts/shop.gd" id="1_kjfcx"]
 
-[node name="Shop" type="Node2D" unique_id=2057546454]
+[node name="Shop" type="Control" unique_id=33663438]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_kjfcx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=334124277]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1712452336]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=647074999]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
