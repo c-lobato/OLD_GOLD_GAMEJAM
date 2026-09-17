@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://bxo1iin3tt4yn"]
 
+[ext_resource type="Script" uid="uid://ce0aoi6sodyb5" path="res://Scripts/coord_manager.gd" id="1_jegfe"]
+
 [node name="CoordManager" type="Node2D" unique_id=1726330944]
+script = ExtResource("1_jegfe")

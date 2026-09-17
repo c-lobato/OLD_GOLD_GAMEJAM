@@ -21,17 +21,7 @@ func _ready():
 	org_cursor.tile_selected.connect(_on_cursor_tile_selected)
 	org_cursor.cancelled_placement.connect(_on_cursor_cancelled)
 
-	var agents_buttons = agents_container.get_children()
-
-	#este for serve para verificar a posição do botão e sobrepor com a posição do agente
-	#no array Global.contratos, assim injetando os dados diretamente no botão com btn.setup(agente)
-	for i in range(Global.contratos.size()):
-		if i < agents_buttons.size():
-			var btn = agents_buttons[i]
-			var agente = Global.contratos[i]
-		
-			btn.setup(agente)
-			btn.pressed.connect(_on_agent_pressed.bind(btn))
+	atualizar_agentes()
 
 #MAQUINA DE ESTADOS - MODO "LOJA" VS MODO "CONSTRUÇÃO"
 #função chamada ao selecionar um agente (apertar Enter numa tropa para posiciona-la na grid)
@@ -69,12 +59,24 @@ func _on_cursor_tile_selected(grid_pos: Vector2i, pixel_pos: Vector2) -> void:
 	occupied_tiles[grid_pos] = selected_agent
 	if selected_agent.cena_agente:   #verificar qual classe vai receber a PackedScene dos tripulante
 		var novo_tripulante = selected_agent.cena_agente.instantiate()
+		novo_tripulante.carregar_dados(selected_agent)
 		novo_tripulante.position = pixel_pos
 		party_grid.add_child(novo_tripulante)
 		print("Tripulante posicionado na grid! Posição: ", grid_pos)
+		Global.adicionar_contrato_grid(selected_agent)
+		atualizar_agentes()
 
 	_return_to_organization_screen()
 
+func atualizar_agentes() ->void:
+	var agents_buttons = agents_container.get_children()
+	for i in range(Global.contratos.size()):
+		if i < agents_buttons.size():
+			var btn = agents_buttons[i]
+			var agente = Global.contratos[i]
+		
+			btn.setup(agente)
+			btn.pressed.connect(_on_agent_pressed.bind(btn))
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

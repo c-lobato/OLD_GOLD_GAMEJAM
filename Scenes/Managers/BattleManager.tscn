@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c0abqtf6uogsv"]
 
 [ext_resource type="Script" uid="uid://w28vob7txa2f" path="res://Scripts/battle_manager.gd" id="1_48vyv"]
+[ext_resource type="PackedScene" uid="uid://bxo1iin3tt4yn" path="res://Scenes/Managers/CoordManager.tscn" id="2_ybgdv"]
 
 [node name="BattleManager" type="Node2D" unique_id=410381830]
 script = ExtResource("1_48vyv")
+
+[node name="CoordManager" parent="." unique_id=1726330944 instance=ExtResource("2_ybgdv")]

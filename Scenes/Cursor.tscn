@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clv3kg34dfevo"]
 
-[ext_resource type="Script" path="res://Scripts/cursor.gd" id="1_5vcpq"]
+[ext_resource type="Script" uid="uid://cm0inwvyfdmqo" path="res://Scripts/cursors/cursor.gd" id="1_5vcpq"]
 [ext_resource type="Texture2D" uid="uid://3gqd0fe2ymf4" path="res://Assets/CursorPlaceholder.png" id="2_6qa2i"]
 
 [node name="Cursor" type="Node2D" unique_id=1434084429]

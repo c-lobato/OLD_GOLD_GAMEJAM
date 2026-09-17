@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dylnh85cu6ute" path="res://Assets/sprites/tilesets/background_tileset.png" id="1_1samx"]
 [ext_resource type="Texture2D" uid="uid://clxuqj0o62vfm" path="res://Assets/icon.svg" id="1_wvl2i"]
-[ext_resource type="PackedScene" uid="uid://diyb7rwklp0xk" path="res://Scenes/Cursor.tscn" id="2_vr6xi"]
+[ext_resource type="PackedScene" uid="uid://diyb7rwklp0xk" path="res://Scenes/Cursors/Cursor.tscn" id="2_vr6xi"]
 [ext_resource type="PackedScene" uid="uid://c0abqtf6uogsv" path="res://Scenes/Managers/BattleManager.tscn" id="3_2h7oj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p46lj"]
