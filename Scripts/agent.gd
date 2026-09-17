@@ -2,6 +2,7 @@ class_name Agent
 extends Node2D
 
 var dados: AgenteData
+signal grid_pos_alterada(nova_posicao:Vector2i)
 
 func carregar_dados(data: AgenteData) -> void:
 	if data == null:

@@ -1,26 +1,91 @@
-[gd_scene format=3 uid="uid://c07d8mw0eohjp"]
+[gd_scene format=4 uid="uid://c07d8mw0eohjp"]
 
 [ext_resource type="Script" uid="uid://ye7ru6uf6wj0" path="res://Scripts/organization_menu.gd" id="1_gkj4o"]
+[ext_resource type="Texture2D" uid="uid://bhpswqy04ui7q" path="res://Assets/sprites/tilesets/grid_tile .png" id="2_gys25"]
+[ext_resource type="Script" uid="uid://cs6qoacjahc8r" path="res://Scripts/cursors/organizationCursor.gd" id="2_pnwjw"]
+[ext_resource type="Texture2D" uid="uid://kk5giirghdpe" path="res://Assets/AgentPlaceHolder.png" id="4_88lvj"]
+[ext_resource type="Script" uid="uid://bbc0ydnfuupao" path="res://Scripts/organization_buttons.gd" id="4_gys25"]
+
+[sub_resource type="Theme" id="Theme_qcdcc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umx6q"]
+texture = ExtResource("2_gys25")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_55kpd"]
+sources/0 = SubResource("TileSetAtlasSource_umx6q")
 
 [node name="OrganizationMenu" type="Node2D" unique_id=260573885]
 script = ExtResource("1_gkj4o")
 
-[node name="Control" type="Control" parent="." unique_id=536204282]
+[node name="Background" type="ColorRect" parent="." unique_id=878266058]
+show_behind_parent = true
+offset_right = 189.0
+offset_bottom = 153.0
+theme = SubResource("Theme_qcdcc")
+color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[node name="PartyGrid" type="Node2D" parent="." unique_id=11179850]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="PartyGrid" unique_id=278798227]
+tile_map_data = PackedByteArray("AAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_55kpd")
+
+[node name="Cursor" type="Node2D" parent="." unique_id=1466833099]
+script = ExtResource("2_pnwjw")
+
+[node name="UI Layer" type="CanvasLayer" parent="." unique_id=1440896721]
+
+[node name="Control" type="Control" parent="UI Layer" unique_id=536204282]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1219491743]
+[node name="AgentsContainer" type="ColorRect" parent="UI Layer/Control" unique_id=259292247]
 layout_mode = 0
-offset_right = 189.0
-offset_bottom = 153.0
-color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+offset_top = 112.0
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0.33809972, 0.3380997, 0.33809966, 1)
 
-[node name="Battle" type="Button" parent="Control" unique_id=203420316]
+[node name="TRIPULANTE 1" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=1245737039]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 5.0
+offset_right = 54.0
+offset_bottom = 29.0
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_constants/outline_size = 4
+icon = ExtResource("4_88lvj")
+script = ExtResource("4_gys25")
+
+[node name="TRIPULANTE 2" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=281949308]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 28.0
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_constants/outline_size = 4
+icon = ExtResource("4_88lvj")
+script = ExtResource("4_gys25")
+
+[node name="TRIPULANTE 3" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=783792135]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 4.0
+offset_right = 139.0
+offset_bottom = 28.0
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_constants/outline_size = 4
+icon = ExtResource("4_88lvj")
+script = ExtResource("4_gys25")
+
+[node name="Battle" type="Button" parent="UI Layer/Control" unique_id=203420316]
 layout_mode = 0
 offset_left = 136.0
 offset_right = 160.0
 offset_bottom = 20.0
 
-[connection signal="pressed" from="Control/Battle" to="." method="_on_battle_pressed"]
+[connection signal="pressed" from="UI Layer/Control/Battle" to="." method="_on_battle_pressed"]

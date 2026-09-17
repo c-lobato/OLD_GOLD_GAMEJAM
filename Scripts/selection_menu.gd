@@ -45,7 +45,7 @@ func _on_curandeiro_pressed() -> void:
 	Global.player_captain = "Curandeiro"
 	
 	var capitao = AgenteData.new()
-	
+	var tripulante = AgenteData.new()
 	capitao.grid_pos = Vector2i(1,1)
 	capitao.tipo = "Curandeiro"
 	capitao.nome = "Capitão"
@@ -55,10 +55,21 @@ func _on_curandeiro_pressed() -> void:
 	capitao.damage = 3
 	capitao.cena_agente = load("res://Scenes/Agentes/Agent.tscn")
 	Global.adicionar_contrato(capitao)
+	tripulante.grid_pos = Vector2i(1,1)
+	tripulante.tipo = "Bucaneiro"
+	tripulante.nome = "Tripulante Teste"
+	tripulante.hp_max = 10
+	tripulante.hp_atual = 10
+	tripulante.speed = 1
+	tripulante.damage = 3
+	tripulante.cena_agente = load("res://Scenes/Agentes/Agent.tscn")
+	Global.adicionar_contrato(tripulante)
 	for i in Global.contratos:
 		print(i.nome)
 		if i.tipo == "Curandeiro":
 			print("Curandeiro")
+		elif i.tipo == "Bucaneiro":
+			print("Bucaneiro")
 	get_tree().change_scene_to_file("res://Scenes/OrganizationMenu.tscn")
 
 
