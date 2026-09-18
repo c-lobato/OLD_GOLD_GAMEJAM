@@ -6,18 +6,11 @@ extends Control
 @onready var label_node = $OuroLabel
 @onready var container_contratos = $ContainerContratos
 @onready var container_itens = $ContainerItens
+@onready var label_contrato = $ContainerContratos/ContainerLabelContratos
 
 func _ready() -> void:
-	var botoes_contratos = container_contratos.get_children()
-	
-	#loop para lógica de botoes
-	for i in range(contratos_disponiveis.size()):
-		if i < botoes_contratos.size():
-			var btn = botoes_contratos[i]
-			var agente = contratos_disponiveis[i]
-
-			btn
-			btn.pressed.connect(contratar_tripulante.bind(agente))
+	container_contratos.grab_focus()
+	atualizar_botoes_contratos()
 
 func _process(delta: float) -> void:
 	var label_texto = "Gold: "
@@ -40,3 +33,18 @@ func contratar_tripulante(agente: AgenteData) -> void:
 	else:
 		var ouro_faltante = agente.custo_contrato - Global.ouro
 		print("Faltam ", ouro_faltante, " moedas de ouro para contratar ", agente.nome, "!")
+
+#funcao nao ta atualizando os icons dos botoes, investigar como fazer
+func atualizar_botoes_contratos() -> void:
+	var botoes_contratos = container_contratos.get_children()
+	
+	#loop para lógica de botoes/recebimento de dados do AgenteData
+	for i in range(contratos_disponiveis.size()):
+		if i < botoes_contratos.size():
+			var btn = botoes_contratos[i]
+			var agente = contratos_disponiveis[i]
+
+			btn.pressed.connect(contratar_tripulante.bind(agente))
+
+
+	
