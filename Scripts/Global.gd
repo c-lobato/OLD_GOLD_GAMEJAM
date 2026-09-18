@@ -4,7 +4,7 @@ var player_captain:String = ""
 var contratos:Array[AgenteData] = []
 var contratos_equipados_grid:Array[AgenteData] = []
 var inventario:Array[Resource] = []
-var ouro:int = 0
+var ouro:int = 50
 
 func _ready() -> void:
 	pass 
@@ -15,6 +15,8 @@ func _process(delta: float) -> void:
 func adicionar_contrato(agente: AgenteData) -> void:
 	var novo_agente = agente.duplicate()
 	contratos.append(novo_agente)
+	print("Sucesso! ", agente.nome, " adicionado em Global.contratos.")
+	print(contratos)
 	
 func remover_contrato(agente: AgenteData) -> void:
 	contratos.erase(agente)
