@@ -46,5 +46,5 @@ func atualizar_botoes_contratos() -> void:
 
 			btn.pressed.connect(contratar_tripulante.bind(agente))
 
-
-	
+func _on_organization_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/OrganizationMenu.tscn")

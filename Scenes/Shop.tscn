@@ -122,7 +122,15 @@ offset_bottom = 109.0
 size_flags_horizontal = 4
 icon = ExtResource("3_lagin")
 
+[node name="Organization" type="Button" parent="." unique_id=2057182451]
+layout_mode = 0
+offset_left = 141.0
+offset_right = 160.0
+offset_bottom = 16.0
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731451445]
 position = Vector2(24, 96)
 scale = Vector2(3, 3)
 texture = ExtResource("3_lagin")
+
+[connection signal="pressed" from="Organization" to="." method="_on_organization_pressed"]

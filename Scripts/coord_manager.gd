@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var lista_coords:Array[Vector2i] = []
+@export var lista_coords: Dictionary = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

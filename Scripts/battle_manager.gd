@@ -19,11 +19,15 @@ func spawnar_agente(dados_do_agente: AgenteData) -> void:
 		
 	print("Agente achado com sucesso!")
 	var novo_agente = dados_do_agente.cena_agente.instantiate()
-	novo_agente.grid_pos_alterada.connect(coordManager.registrar_posicao_agente)
 	add_child(novo_agente)
 	
 	if novo_agente.has_method("carregar_dados"):
 		novo_agente.carregar_dados(dados_do_agente)
+		novo_agente.position.x = 0 + (16 * novo_agente.grid_pos.x - 16)
+		novo_agente.position.y = 80 + (16 * novo_agente.grid_pos.y - 16)
+		novo_agente.grid_pos.y += 5
+		print("Posição no Grid do Agente:", novo_agente.grid_pos)
+		novo_agente.grid_pos_alterada.connect(coordManager.registrar_posicao_agente)
 		
 	else:
 		print("Aviso: O nó instanciado não possui a função 'carregar_dados'")

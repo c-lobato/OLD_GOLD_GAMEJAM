@@ -7,6 +7,8 @@ signal tile_selected(pos: Vector2i, pixel_pos: Vector2)
 signal cancelled_placement
 
 func _ready() -> void:
+	position.x = 48
+	position.y = 32
 	hide() #cursor começa escondido 
 
 func _process(delta: float) -> void:
@@ -18,7 +20,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Left") and grid_pos.x != 1:
 		position.x -= 16
 		grid_pos.x -= 1
-	if Input.is_action_just_pressed("Down") and grid_pos.y != 4:
+	if Input.is_action_just_pressed("Down") and grid_pos.y != 3:
 		position.y += 16
 		grid_pos.y += 1
 	if Input.is_action_just_pressed("Up") and grid_pos.y != 1:
@@ -33,5 +35,5 @@ func _process(delta: float) -> void:
 
 #função que confirma a grid_pos onde a instancia do contrato foi colocada
 func select_tile() -> void:
-	print("Grid_pos atual: ", grid_pos)
+	print("Grid_pos atual: ", grid_pos, position)
 	tile_selected.emit(grid_pos, position)

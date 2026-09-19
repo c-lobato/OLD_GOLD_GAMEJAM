@@ -46,6 +46,8 @@ func _on_curandeiro_pressed() -> void:
 	
 	var capitao = AgenteData.new()
 	var tripulante = AgenteData.new()
+	var tripulante_01 = AgenteData.new()
+	var tripulante_02 = AgenteData.new()
 	capitao.grid_pos = Vector2i(1,1)
 	capitao.tipo = "Curandeiro"
 	capitao.nome = "Capitão"
@@ -64,6 +66,14 @@ func _on_curandeiro_pressed() -> void:
 	tripulante.damage = 3
 	tripulante.cena_agente = load("res://Scenes/Agentes/Agent.tscn")
 	Global.adicionar_contrato(tripulante)
+	tripulante_01.copy_from_resource(tripulante)
+	tripulante_02.copy_from_resource(tripulante)
+	tripulante_01.tipo = "Curandeiro"
+	tripulante_02.tipo = "Marujo"
+	
+	Global.adicionar_contrato(tripulante_01)
+	Global.adicionar_contrato(tripulante_02)
+	
 	for i in Global.contratos:
 		print(i.nome)
 		if i.tipo == "Curandeiro":

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cs6qoacjahc8r" path="res://Scripts/cursors/organizationCursor.gd" id="2_pnwjw"]
 [ext_resource type="Texture2D" uid="uid://kk5giirghdpe" path="res://Assets/AgentPlaceHolder.png" id="4_88lvj"]
 [ext_resource type="Script" uid="uid://bbc0ydnfuupao" path="res://Scripts/organization_buttons.gd" id="4_gys25"]
+[ext_resource type="Texture2D" uid="uid://3gqd0fe2ymf4" path="res://Assets/CursorPlaceholder.png" id="4_umx6q"]
 
 [sub_resource type="Theme" id="Theme_qcdcc"]
 
@@ -33,6 +34,10 @@ tile_set = SubResource("TileSet_55kpd")
 
 [node name="Cursor" type="Node2D" parent="." unique_id=1466833099]
 script = ExtResource("2_pnwjw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cursor" unique_id=464429006]
+position = Vector2(8, 8)
+texture = ExtResource("4_umx6q")
 
 [node name="UI Layer" type="CanvasLayer" parent="." unique_id=1440896721]
 

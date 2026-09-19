@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AgenteData" format=3 uid="uid://tp3cgkdwaaet"]
 
 [ext_resource type="Script" uid="uid://bj6ka1xggy460" path="res://Scripts/agenteData.gd" id="1_bk26n"]
-
-[sub_resource type="PackedScene" id="PackedScene_jd2bm"]
+[ext_resource type="PackedScene" uid="uid://bvsbhej82wthb" path="res://Scenes/Agentes/Agent.tscn" id="1_jd2bm"]
 
 [resource]
 script = ExtResource("1_bk26n")
 custo_contrato = 20
 nome = "Marujo"
-cena_agente = SubResource("PackedScene_jd2bm")
+tipo = "Marujo"
+cena_agente = ExtResource("1_jd2bm")
 metadata/_custom_type_script = "uid://bj6ka1xggy460"

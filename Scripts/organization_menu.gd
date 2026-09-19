@@ -59,6 +59,7 @@ func _on_cursor_tile_selected(grid_pos: Vector2i, pixel_pos: Vector2) -> void:
 		var novo_tripulante = selected_agent.cena_agente.instantiate()
 		novo_tripulante.carregar_dados(selected_agent)
 		novo_tripulante.position = pixel_pos
+		selected_agent.grid_pos = grid_pos
 		party_grid.add_child(novo_tripulante)
 		print("Tripulante posicionado na grid! Posição: ", grid_pos)
 		Global.adicionar_contrato_grid(selected_agent)

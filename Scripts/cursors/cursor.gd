@@ -21,4 +21,4 @@ func _process(delta: float) -> void:
 
 
 func select_tile() -> void:
-	print("Grid_pos atual: ", grid_pos)
+	print("Grid_pos atual: ", grid_pos, position)
