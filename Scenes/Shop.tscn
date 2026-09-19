@@ -1,3 +1,128 @@
 [gd_scene format=3 uid="uid://bna670axencwl"]
 
-[node name="Shop" type="Node2D" unique_id=2057546454]
+[ext_resource type="Script" uid="uid://dbr8qecar4orf" path="res://Scripts/shop.gd" id="1_kjfcx"]
+[ext_resource type="Script" uid="uid://bj6ka1xggy460" path="res://Scripts/agenteData.gd" id="2_iidq5"]
+[ext_resource type="Texture2D" uid="uid://kk5giirghdpe" path="res://Assets/AgentPlaceHolder.png" id="3_lagin"]
+[ext_resource type="Resource" uid="uid://tp3cgkdwaaet" path="res://Resources/marujo.tres" id="3_wndna"]
+[ext_resource type="Resource" uid="uid://bb03mu58wordx" path="res://Resources/bucaneiro.tres" id="4_ckylj"]
+[ext_resource type="Resource" uid="uid://ds2jxekd1ngjb" path="res://Resources/curandeiro.tres" id="5_2aaoe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lagin"]
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_i4qx4"]
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_e5ji4"]
+font_size = 8
+
+[node name="Shop" type="Control" unique_id=33663438]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kjfcx")
+contratos_disponiveis = Array[ExtResource("2_iidq5")]([ExtResource("3_wndna"), ExtResource("4_ckylj"), ExtResource("5_2aaoe")])
+
+[node name="Background2" type="ColorRect" parent="." unique_id=1560076108]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[node name="Balcão" type="ColorRect" parent="." unique_id=2126809248]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0.26475376, 0.19825757, 0.025896076, 1)
+
+[node name="PainelLoja" type="ColorRect" parent="." unique_id=334124277]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 16.0
+offset_right = 160.0
+offset_bottom = 120.0
+color = Color(0.5764706, 0.50980395, 0.18431373, 1)
+
+[node name="ItensLabel" type="Label" parent="." unique_id=1242427863]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 92.0
+offset_bottom = 38.0
+text = "ITENS"
+label_settings = SubResource("LabelSettings_lagin")
+
+[node name="ContratosLabel" type="Label" parent="." unique_id=178527612]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 124.0
+offset_bottom = 86.0
+text = "CONTRATOS"
+label_settings = SubResource("LabelSettings_i4qx4")
+
+[node name="OuroLabel" type="Label" parent="." unique_id=647074999]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 52.0
+offset_bottom = 20.0
+text = "OURO: "
+label_settings = SubResource("LabelSettings_e5ji4")
+
+[node name="ContainerItens" type="Control" parent="." unique_id=1132320778]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ITEM 1" type="Button" parent="ContainerItens" unique_id=171451063]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 37.0
+offset_right = 96.0
+offset_bottom = 61.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("3_lagin")
+
+[node name="ITEM 2" type="Button" parent="ContainerItens" unique_id=589352379]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 37.0
+offset_right = 136.0
+offset_bottom = 61.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("3_lagin")
+
+[node name="ContainerContratos" type="Control" parent="." unique_id=1946978845]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CONTRATO 1" type="Button" parent="ContainerContratos" unique_id=1537285112]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 85.0
+offset_right = 96.0
+offset_bottom = 109.0
+size_flags_horizontal = 4
+icon = ExtResource("3_lagin")
+
+[node name="CONTRATO 2" type="Button" parent="ContainerContratos" unique_id=465350473]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 85.0
+offset_right = 136.0
+offset_bottom = 109.0
+size_flags_horizontal = 4
+icon = ExtResource("3_lagin")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731451445]
+position = Vector2(24, 96)
+scale = Vector2(3, 3)
+texture = ExtResource("3_lagin")

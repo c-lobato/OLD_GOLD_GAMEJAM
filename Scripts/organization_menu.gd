@@ -7,7 +7,6 @@ extends Node2D
 
 var occupied_tiles = {} # salva a disposição da party: chave = Vector2i, valor = AgenteData
 var selected_agent: AgenteData = null
-var tween = create_tween()
 
 # Called when the node enters the scene tree for the first time.
 func _ready(): 
@@ -34,9 +33,8 @@ func _on_agent_pressed(btn_node: Button) -> void:
 	org_cursor.is_active = true
 	org_cursor.show()
 
-	#animação de surgimento da grid
-	tween.tween_property(party_grid, "modulate:a", 0.85, 0.2)
-
+	party_grid.modulate.a = 0.8
+	
 	#tira o foco da UI e joga para a grid da party
 	var focus_owner = get_viewport().gui_get_focus_owner()
 	if focus_owner:
@@ -92,8 +90,7 @@ func _return_to_organization_screen() -> void:
 	org_cursor.hide()
 	selected_agent = null
 
-	tween.tween_property(party_grid, "modulate:a", 0.3, 0.2)
-
+	party_grid.modulate.a = 0.3
 
 	# Devolve o foco para o primeiro botão para o jogador continuar navegando
 	agents_container.get_child(0).grab_focus()
