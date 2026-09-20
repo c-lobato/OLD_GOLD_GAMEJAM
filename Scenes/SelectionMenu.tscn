@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://byuin65dyvkd6" path="res://Assets/sprites/characters/buccaneer_classArt.png" id="2_vxvem"]
 [ext_resource type="Texture2D" uid="uid://dxtrijtp7nekq" path="res://Assets/sprites/characters/sailor_classArt.png" id="3_3rdv3"]
 [ext_resource type="Texture2D" uid="uid://dmy8wglyo25fb" path="res://Assets/sprites/misc/Walk_menu.png" id="4_3rdv3"]
+[ext_resource type="Texture2D" uid="uid://crfdgtw5g32lt" path="res://Assets/sprites/characters/healer_classArt.png" id="4_od0tc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_umx6q"]
 
@@ -13,6 +14,10 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1c0q"]
 bg_color = Color(0.14117648, 0.2784314, 0.38039216, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_od0tc"]
+font_size = 7
+font_color = Color(0.14117648, 0.2784314, 0.38039216, 1)
 
 [node name="SelectionMenu" type="Node2D" unique_id=508334293]
 script = ExtResource("1_5vffu")
@@ -68,6 +73,7 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_umx6q")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_dvwno")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_qcdcc")
+icon = ExtResource("4_od0tc")
 
 [node name="Credits" type="Button" parent="Control/VBoxContainer" unique_id=1082545770]
 layout_mode = 2
@@ -76,6 +82,18 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_m1c0q")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m1c0q")
 text = "Credits"
 icon = ExtResource("4_3rdv3")
+
+[node name="Label" type="Label" parent="Control" unique_id=873622064]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -63.5
+offset_right = 63.5
+offset_bottom = 9.0
+grow_horizontal = 2
+text = "Choose your captain"
+label_settings = SubResource("LabelSettings_od0tc")
 
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Bucaneiro" to="." method="_on_bucaneiro_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/Marujo" to="." method="_on_marujo_pressed"]
