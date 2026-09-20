@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://tp3cgkdwaaet" path="res://Resources/marujo.tres" id="3_wndna"]
 [ext_resource type="Resource" uid="uid://bb03mu58wordx" path="res://Resources/bucaneiro.tres" id="4_ckylj"]
 [ext_resource type="Resource" uid="uid://ds2jxekd1ngjb" path="res://Resources/curandeiro.tres" id="5_2aaoe"]
+[ext_resource type="Texture2D" uid="uid://ds3xl5na3tcgp" path="res://Assets/sprites/backgrounds/shopkeeper.png" id="7_ckylj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lagin"]
 font_size = 10
@@ -129,8 +130,7 @@ offset_right = 160.0
 offset_bottom = 16.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731451445]
-position = Vector2(24, 96)
-scale = Vector2(3, 3)
-texture = ExtResource("3_lagin")
+position = Vector2(28, 70)
+texture = ExtResource("7_ckylj")
 
 [connection signal="pressed" from="Organization" to="." method="_on_organization_pressed"]

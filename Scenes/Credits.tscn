@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b87wudfs6nqnq"]
 
 [ext_resource type="Script" uid="uid://ctrbojcx0sse0" path="res://Scripts/credits.gd" id="1_i8h6y"]
+[ext_resource type="Texture2D" uid="uid://dbbcb366c4u76" path="res://Assets/sprites/backgrounds/Credits_bg.png" id="2_xbebw"]
 
 [node name="Credits" type="Node2D" unique_id=428864299]
 script = ExtResource("1_i8h6y")
@@ -11,15 +12,16 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=98305651]
-layout_mode = 0
-offset_right = 189.0
-offset_bottom = 153.0
-color = Color(0.60784316, 0.6784314, 0.7176471, 1)
-
 [node name="Back" type="Button" parent="Control" unique_id=1341887982]
+z_index = 2
 layout_mode = 0
 offset_right = 24.0
 offset_bottom = 20.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1022113185]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_xbebw")
 
 [connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]

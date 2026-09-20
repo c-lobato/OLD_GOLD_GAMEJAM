@@ -1,11 +1,41 @@
 [gd_scene format=3 uid="uid://jlee3wmxxn30"]
 
-[ext_resource type="Texture2D" uid="uid://3gqd0fe2ymf4" path="res://Assets/CursorPlaceholder.png" id="1_384tf"]
 [ext_resource type="Script" uid="uid://cs6qoacjahc8r" path="res://Scripts/cursors/organizationCursor.gd" id="1_ep1tn"]
+[ext_resource type="Texture2D" uid="uid://chqhdofhwcto2" path="res://Assets/sprites/cursor.png" id="2_ep1tn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0xxa"]
+atlas = ExtResource("2_ep1tn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgg0x"]
+atlas = ExtResource("2_ep1tn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vapm5"]
+atlas = ExtResource("2_ep1tn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6wxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0xxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgg0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vapm5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="OrgCursor" type="Node2D" unique_id=1196401456]
 position = Vector2(8, 8)
 script = ExtResource("1_ep1tn")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=841733150]
-texture = ExtResource("1_384tf")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1295290024]
+sprite_frames = SubResource("SpriteFrames_f6wxy")
+frame_progress = 0.5875173

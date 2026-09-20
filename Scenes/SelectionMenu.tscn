@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ccv6jrcvpjnwj"]
 
 [ext_resource type="Script" uid="uid://bmpnjl5hv2n48" path="res://Scripts/selection_menu.gd" id="1_5vffu"]
+[ext_resource type="Texture2D" uid="uid://byuin65dyvkd6" path="res://Assets/sprites/characters/buccaneer_classArt.png" id="2_vxvem"]
+[ext_resource type="Texture2D" uid="uid://dxtrijtp7nekq" path="res://Assets/sprites/characters/sailor_classArt.png" id="3_3rdv3"]
 
 [node name="SelectionMenu" type="Node2D" unique_id=508334293]
 script = ExtResource("1_5vffu")
@@ -32,9 +34,11 @@ alignment = 1
 [node name="Bucaneiro" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=1666220068]
 layout_mode = 2
 size_flags_horizontal = 0
+icon = ExtResource("2_vxvem")
 
 [node name="Marujo" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=1225759406]
 layout_mode = 2
+icon = ExtResource("3_3rdv3")
 
 [node name="Curandeiro" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=544822634]
 layout_mode = 2

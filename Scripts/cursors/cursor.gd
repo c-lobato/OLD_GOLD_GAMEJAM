@@ -1,7 +1,7 @@
 extends Node2D
 var grid_pos:Vector2i = Vector2i(1,1)
 func _ready() -> void:
-	pass # Replace with function body.
+	$AnimatedSprite2D.play()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Right") and grid_pos.x != 10:
