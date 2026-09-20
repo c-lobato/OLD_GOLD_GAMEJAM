@@ -75,6 +75,7 @@ script = ExtResource("1_lyujn")
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f6wxy")
 animation = &"Curandeiro "
+frame_progress = 0.9067943
 
 [node name="Area2D" type="Area2D" parent="." unique_id=546004680]
 position = Vector2(8, 8)

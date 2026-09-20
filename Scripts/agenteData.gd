@@ -7,9 +7,8 @@ extends Resource
 @export var hp_max: int = 10
 @export var hp_atual: int = 10
 @export var speed: int = 1
+@export var distance: int = 2
 @export var damage: int = 3
 @export var tipo: String = ""
 
 @export var cena_agente: PackedScene
-
-@export var itens_equipados: Array[Resource] = []

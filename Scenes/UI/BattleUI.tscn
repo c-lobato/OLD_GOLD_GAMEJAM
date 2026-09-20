@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://du2bm4xatgfi"]
 
 [ext_resource type="Texture2D" uid="uid://bexwg0cyhpwer" path="res://Assets/sprites/misc/Menu.png" id="1_2xehn"]
+[ext_resource type="Script" uid="uid://dvycl27y1tv6x" path="res://Scripts/battle_ui.gd" id="1_a1iff"]
 [ext_resource type="Texture2D" uid="uid://dkrqiha45r70w" path="res://Assets/sprites/misc/Attack_menu.png" id="2_h4kvj"]
 [ext_resource type="Texture2D" uid="uid://ch6ua84qa1hhl" path="res://Assets/sprites/misc/Item_menu.png" id="3_a1iff"]
 [ext_resource type="Texture2D" uid="uid://dmy8wglyo25fb" path="res://Assets/sprites/misc/Walk_menu.png" id="4_5s6ks"]
@@ -14,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_a1iff")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1558929189]
 layout_mode = 0
