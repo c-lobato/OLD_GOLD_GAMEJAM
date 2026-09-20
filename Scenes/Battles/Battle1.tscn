@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://diyb7rwklp0xk" path="res://Scenes/Cursors/Cursor.tscn" id="3_dg0ay"]
 [ext_resource type="PackedScene" uid="uid://c0abqtf6uogsv" path="res://Scenes/Managers/BattleManager.tscn" id="4_s56lh"]
 [ext_resource type="PackedScene" uid="uid://baxroult7b8rk" path="res://Scenes/Agentes/Treasure.tscn" id="6_du130"]
+[ext_resource type="PackedScene" uid="uid://du2bm4xatgfi" path="res://Scenes/UI/BattleUI.tscn" id="7_s043t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p46lj"]
 texture = ExtResource("1_dp6q3")
@@ -98,3 +99,5 @@ tipo = "White"
 z_index = 1
 position = Vector2(144, 112)
 tipo = "Blue"
+
+[node name="BattleUI" parent="." unique_id=263291268 instance=ExtResource("7_s043t")]
