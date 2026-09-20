@@ -6,6 +6,8 @@ var contratos_equipados_grid:Array[AgenteData] = []
 var inventario:Array[Resource] = []
 var ouro:int = 50
 
+var level_atual:int = 1
+
 func _ready() -> void:
 	pass 
 

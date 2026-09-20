@@ -30,6 +30,11 @@ window/stretch/mode="viewport"
 
 project/assembly_name="GBJam"
 
+[global_group]
+
+Agent="Qualquer agente seja ele aliado ou inimigo"
+Treasure=""
+
 [input]
 
 ui_accept={

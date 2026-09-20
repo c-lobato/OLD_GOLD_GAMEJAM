@@ -14,3 +14,9 @@ func _process(delta: float) -> void:
 func registrar_posicao_agente(agente: Node, nova_posicao: Vector2i) -> void:
 	lista_coords[agente] = nova_posicao
 	print("CoordManager: ", agente.name, " movido/registrado na posição ", nova_posicao)
+
+func obter_agente_na_posicao(posicao_alvo: Vector2i) -> Node:
+	for agente in lista_coords:
+		if lista_coords[agente] == posicao_alvo:
+			return agente
+	return null

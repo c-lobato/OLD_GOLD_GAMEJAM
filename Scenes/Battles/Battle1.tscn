@@ -1,14 +1,14 @@
-[gd_scene format=4 uid="uid://cpkxe68xrwm8r"]
+[gd_scene format=4 uid="uid://46a8totskehc"]
 
-[ext_resource type="Texture2D" uid="uid://dylnh85cu6ute" path="res://Assets/sprites/tilesets/background_tileset.png" id="1_1samx"]
-[ext_resource type="Texture2D" uid="uid://clxuqj0o62vfm" path="res://Assets/icon.svg" id="1_wvl2i"]
-[ext_resource type="PackedScene" uid="uid://diyb7rwklp0xk" path="res://Scenes/Cursors/Cursor.tscn" id="2_vr6xi"]
-[ext_resource type="PackedScene" uid="uid://c0abqtf6uogsv" path="res://Scenes/Managers/BattleManager.tscn" id="3_2h7oj"]
-[ext_resource type="PackedScene" uid="uid://bvsbhej82wthb" path="res://Scenes/Agentes/Agent.tscn" id="5_p46lj"]
-[ext_resource type="PackedScene" uid="uid://baxroult7b8rk" path="res://Scenes/Agentes/Treasure.tscn" id="6_8teo4"]
+[ext_resource type="Texture2D" uid="uid://dylnh85cu6ute" path="res://Assets/sprites/tilesets/background_tileset.png" id="1_dp6q3"]
+[ext_resource type="Texture2D" uid="uid://clxuqj0o62vfm" path="res://Assets/icon.svg" id="2_s043t"]
+[ext_resource type="PackedScene" uid="uid://diyb7rwklp0xk" path="res://Scenes/Cursors/Cursor.tscn" id="3_dg0ay"]
+[ext_resource type="PackedScene" uid="uid://c0abqtf6uogsv" path="res://Scenes/Managers/BattleManager.tscn" id="4_s56lh"]
+[ext_resource type="PackedScene" uid="uid://bvsbhej82wthb" path="res://Scenes/Agentes/Agent.tscn" id="5_86n16"]
+[ext_resource type="PackedScene" uid="uid://baxroult7b8rk" path="res://Scenes/Agentes/Treasure.tscn" id="6_du130"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p46lj"]
-texture = ExtResource("1_1samx")
+texture = ExtResource("1_dp6q3")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -65,39 +65,39 @@ texture = ExtResource("1_1samx")
 5:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvl2i"]
-texture = ExtResource("1_wvl2i")
+texture = ExtResource("2_s043t")
 2:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_f6wxy"]
 sources/2 = SubResource("TileSetAtlasSource_wvl2i")
 sources/0 = SubResource("TileSetAtlasSource_p46lj")
 
-[node name="Battle" type="Node2D" unique_id=530460860]
+[node name="Battle1" type="Node2D" unique_id=530460860]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=935349986]
 tile_map_data = PackedByteArray("AAAAAAcAAAADAAIAAAABAAcAAAADAAIAAAACAAcAAAADAAIAAAADAAcAAAADAAIAAAAEAAcAAAADAAIAAAAFAAcAAAADAAIAAAAGAAcAAAADAAIAAAAHAAcAAAADAAIAAAAIAAcAAAADAAIAAAAJAAcAAAADAAIAAAAJAAYAAAADAAIAAAAIAAYAAAAEAAIAAAAHAAYAAAAAAAcAAAAGAAYAAAABAAcAAAAFAAYAAAADAAIAAAAEAAYAAAADAAIAAAADAAYAAAADAAIAAAACAAYAAAADAAIAAAABAAYAAAADAAIAAAAAAAYAAAACAAYAAAAAAAUAAAAEAAIAAAAAAAQAAAADAAIAAAAAAAMAAAABAAIAAAAAAAIAAAABAAMAAAAAAAEAAAADAAUAAAAAAAAAAAADAAUAAAABAAAAAAADAAUAAAACAAAAAAADAAUAAAACAAEAAAABAAsAAAABAAEAAAADAAUAAAABAAIAAAABAAMAAAABAAMAAAAIAAAAAAABAAQAAAAAAAIAAAABAAUAAAADAAIAAAACAAQAAAAHAAQAAAACAAMAAAACAAQAAAACAAIAAAACAAMAAAACAAUAAAAAAAIAAAADAAUAAAABAAIAAAAEAAUAAAABAAIAAAADAAEAAAADAAUAAAADAAAAAAAEAAUAAAADAAIAAAADAAUAAAADAAMAAAADAAUAAAAEAAMAAAADAAUAAAAEAAQAAAADAAMAAAADAAQAAAABAAMAAAAEAAEAAAADAAUAAAAEAAAAAAADAAUAAAAEAAIAAAAAAAsAAAAFAAIAAAADAAUAAAAFAAEAAAADAAUAAAAFAAAAAAADAAUAAAAGAAAAAAADAAUAAAAHAAAAAAADAAUAAAAIAAAAAAADAAUAAAAJAAAAAAADAAUAAAAJAAEAAAADAAUAAAAJAAIAAAAAAAsAAAAJAAMAAAADAAUAAAAJAAQAAAABAAMAAAAJAAUAAAABAAIAAAAIAAUAAAABAAIAAAAHAAUAAAABAAIAAAAGAAUAAAABAAIAAAAGAAQAAAADAAMAAAAHAAQAAAABAAMAAAAIAAQAAAABAAMAAAAHAAMAAAADAAUAAAAIAAMAAAADAAUAAAAGAAMAAAADAAUAAAAFAAMAAAADAAUAAAAIAAIAAAAEAAUAAAAHAAIAAAADAAUAAAAGAAIAAAADAAUAAAAGAAEAAAADAAUAAAAHAAEAAAABAAkAAAAIAAEAAAADAAUAAAAFAAUAAAADAAQAAFAFAAQAAAADAAMAAAA=")
 tile_set = SubResource("TileSet_f6wxy")
 
-[node name="Cursor" parent="." unique_id=1434084429 instance=ExtResource("2_vr6xi")]
+[node name="Cursor" parent="." unique_id=1434084429 instance=ExtResource("3_dg0ay")]
 z_index = 5
 
-[node name="BattleManager" parent="." unique_id=410381830 instance=ExtResource("3_2h7oj")]
+[node name="BattleManager" parent="." unique_id=410381830 instance=ExtResource("4_s56lh")]
 Level = 1
 
-[node name="Agent" parent="." unique_id=1197959878 instance=ExtResource("5_p46lj")]
+[node name="Agent" parent="." unique_id=1197959878 instance=ExtResource("5_86n16")]
 visible = false
 
-[node name="Treasure" parent="." unique_id=2135146587 instance=ExtResource("6_8teo4")]
+[node name="Treasure" parent="." unique_id=2135146587 instance=ExtResource("6_du130")]
 z_index = 1
 position = Vector2(0, 16)
 tipo = "White"
 
-[node name="Treasure2" parent="." unique_id=723262685 instance=ExtResource("6_8teo4")]
+[node name="Treasure2" parent="." unique_id=723262685 instance=ExtResource("6_du130")]
 z_index = 1
 position = Vector2(80, 64)
 tipo = "White"
 
-[node name="Treasure3" parent="." unique_id=2131957620 instance=ExtResource("6_8teo4")]
+[node name="Treasure3" parent="." unique_id=2131957620 instance=ExtResource("6_du130")]
 z_index = 1
 position = Vector2(144, 112)
 tipo = "Blue"

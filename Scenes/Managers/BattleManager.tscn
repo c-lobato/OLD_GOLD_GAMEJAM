@@ -5,5 +5,6 @@
 
 [node name="BattleManager" type="Node2D" unique_id=410381830]
 script = ExtResource("1_48vyv")
+Level = null
 
 [node name="CoordManager" parent="." unique_id=1726330944 instance=ExtResource("2_ybgdv")]

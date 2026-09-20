@@ -81,7 +81,16 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_battle_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Battle.tscn")
+	if Global.level_atual == 1:
+		get_tree().change_scene_to_file("res://Scenes/Battles/Battle1.tscn")
+	if Global.level_atual == 2:
+		get_tree().change_scene_to_file("res://Scenes/Battles/Battle2.tscn")
+	if Global.level_atual == 3:
+		get_tree().change_scene_to_file("res://Scenes/Battles/Battle3.tscn")
+	if Global.level_atual == 4:
+		get_tree().change_scene_to_file("res://Scenes/Battles/Battle4.tscn")
+	if Global.level_atual == 5:
+		get_tree().change_scene_to_file("res://Scenes/Battles/Battle5.tscn")
 
 func _on_cursor_cancelled() -> void:
 	_return_to_organization_screen()

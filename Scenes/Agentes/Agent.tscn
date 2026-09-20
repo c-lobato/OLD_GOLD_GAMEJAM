@@ -65,10 +65,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Agent" type="Node2D" unique_id=1197959878]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6y6ox"]
+size = Vector2(15, 15)
+
+[node name="Agent" type="Node2D" unique_id=1197959878 groups=["Agent"]]
 script = ExtResource("1_lyujn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=919824582]
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f6wxy")
 animation = &"Curandeiro "
+
+[node name="Area2D" type="Area2D" parent="." unique_id=546004680]
+position = Vector2(8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=851860664]
+shape = SubResource("RectangleShape2D_6y6ox")
