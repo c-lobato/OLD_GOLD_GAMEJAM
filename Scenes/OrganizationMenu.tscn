@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://ye7ru6uf6wj0" path="res://Scripts/organization_menu.gd" id="1_gkj4o"]
 [ext_resource type="Texture2D" uid="uid://bhpswqy04ui7q" path="res://Assets/sprites/tilesets/grid_tile .png" id="2_gys25"]
 [ext_resource type="Script" uid="uid://cs6qoacjahc8r" path="res://Scripts/cursors/organizationCursor.gd" id="2_pnwjw"]
-[ext_resource type="Texture2D" uid="uid://kk5giirghdpe" path="res://Assets/AgentPlaceHolder.png" id="4_88lvj"]
 [ext_resource type="Script" uid="uid://bbc0ydnfuupao" path="res://Scripts/organization_buttons.gd" id="4_gys25"]
 [ext_resource type="Texture2D" uid="uid://3gqd0fe2ymf4" path="res://Assets/CursorPlaceholder.png" id="4_umx6q"]
+[ext_resource type="Texture2D" uid="uid://bexwg0cyhpwer" path="res://Assets/sprites/misc/Menu.png" id="5_umx6q"]
 
 [sub_resource type="Theme" id="Theme_qcdcc"]
 
@@ -15,6 +15,12 @@ texture = ExtResource("2_gys25")
 
 [sub_resource type="TileSet" id="TileSet_55kpd"]
 sources/0 = SubResource("TileSetAtlasSource_umx6q")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_umx6q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qcdcc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dvwno"]
 
 [node name="OrganizationMenu" type="Node2D" unique_id=260573885]
 script = ExtResource("1_gkj4o")
@@ -47,44 +53,42 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="AgentsContainer" type="ColorRect" parent="UI Layer/Control" unique_id=259292247]
+[node name="AgentsContainer" type="NinePatchRect" parent="UI Layer/Control" unique_id=1851555166]
 layout_mode = 0
 offset_top = 112.0
 offset_right = 160.0
 offset_bottom = 144.0
-color = Color(0.33809972, 0.3380997, 0.33809966, 1)
+texture = ExtResource("5_umx6q")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
 
-[node name="TRIPULANTE 1" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=1245737039]
+[node name="TRIPULANTE 1" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=769123449]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 5.0
 offset_right = 54.0
 offset_bottom = 29.0
-theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_constants/outline_size = 4
-icon = ExtResource("4_88lvj")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_umx6q")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qcdcc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dvwno")
 script = ExtResource("4_gys25")
 
-[node name="TRIPULANTE 2" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=281949308]
+[node name="TRIPULANTE 2" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=1823651735]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 4.0
 offset_right = 96.0
 offset_bottom = 28.0
-theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_constants/outline_size = 4
-icon = ExtResource("4_88lvj")
 script = ExtResource("4_gys25")
 
-[node name="TRIPULANTE 3" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=783792135]
+[node name="TRIPULANTE 3" type="Button" parent="UI Layer/Control/AgentsContainer" unique_id=1074602264]
 layout_mode = 0
 offset_left = 115.0
 offset_top = 4.0
 offset_right = 139.0
 offset_bottom = 28.0
-theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_constants/outline_size = 4
-icon = ExtResource("4_88lvj")
 script = ExtResource("4_gys25")
 
 [node name="Battle" type="Button" parent="UI Layer/Control" unique_id=203420316]

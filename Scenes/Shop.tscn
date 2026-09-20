@@ -6,6 +6,8 @@
 [ext_resource type="Resource" uid="uid://tp3cgkdwaaet" path="res://Resources/marujo.tres" id="3_wndna"]
 [ext_resource type="Resource" uid="uid://bb03mu58wordx" path="res://Resources/bucaneiro.tres" id="4_ckylj"]
 [ext_resource type="Resource" uid="uid://ds2jxekd1ngjb" path="res://Resources/curandeiro.tres" id="5_2aaoe"]
+[ext_resource type="Texture2D" uid="uid://bexwg0cyhpwer" path="res://Assets/sprites/misc/Menu.png" id="6_ct2yw"]
+[ext_resource type="Script" uid="uid://wpjqilmh0njb" path="res://Scripts/item_1.gd" id="7_2aaoe"]
 [ext_resource type="Texture2D" uid="uid://ds3xl5na3tcgp" path="res://Assets/sprites/backgrounds/shopkeeper.png" id="7_ckylj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lagin"]
@@ -31,22 +33,30 @@ contratos_disponiveis = Array[ExtResource("2_iidq5")]([ExtResource("3_wndna"), E
 layout_mode = 0
 offset_right = 160.0
 offset_bottom = 144.0
-color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+color = Color(0.14117648, 0.2784314, 0.38039216, 1)
 
-[node name="Balcão" type="ColorRect" parent="." unique_id=2126809248]
+[node name="Balcão" type="NinePatchRect" parent="." unique_id=1038416858]
 layout_mode = 0
 offset_top = 120.0
 offset_right = 160.0
 offset_bottom = 144.0
-color = Color(0.26475376, 0.19825757, 0.025896076, 1)
+texture = ExtResource("6_ct2yw")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
 
-[node name="PainelLoja" type="ColorRect" parent="." unique_id=334124277]
+[node name="PainelLoja" type="NinePatchRect" parent="." unique_id=1664660281]
 layout_mode = 0
-offset_left = 56.0
+offset_left = 45.0
 offset_top = 16.0
 offset_right = 160.0
 offset_bottom = 120.0
-color = Color(0.5764706, 0.50980395, 0.18431373, 1)
+texture = ExtResource("6_ct2yw")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
 
 [node name="ItensLabel" type="Label" parent="." unique_id=1242427863]
 layout_mode = 0
@@ -89,6 +99,7 @@ offset_bottom = 61.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 icon = ExtResource("3_lagin")
+script = ExtResource("7_2aaoe")
 
 [node name="ITEM 2" type="Button" parent="ContainerItens" unique_id=589352379]
 layout_mode = 0
@@ -130,7 +141,7 @@ offset_right = 160.0
 offset_bottom = 16.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731451445]
-position = Vector2(28, 70)
+position = Vector2(23, 70)
 texture = ExtResource("7_ckylj")
 
 [connection signal="pressed" from="Organization" to="." method="_on_organization_pressed"]

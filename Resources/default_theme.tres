@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://31drukesojle"]
+
+[ext_resource type="FontFile" uid="uid://ban1gbkc17ijp" path="res://Assets/Font/Early GameBoy.ttf" id="1_76a3c"]
+
+[resource]
+default_font = ExtResource("1_76a3c")
+Label/colors/font_color = Color(0.05882353, 0.05882353, 0.105882354, 1)
